@@ -9,8 +9,8 @@ services:
     image: munkyboy/fakesmtp
     volumes:
       - /tmp/fakemail:/var/mail
-    ports:
-      - "2525:25"
+    #ports:
+    #  - "2525:25"
     restart: always
 
   # Download from Docker Hub
@@ -18,6 +18,6 @@ services:
     image: munkyboy/fakesmtp
     volumes:
       - /tmp/fakemail:/var/mail
-    ports:
-      - "2525:25"
+    #ports:
+    #  - "2525:25"
     restart: always
