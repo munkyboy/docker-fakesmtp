@@ -1,0 +1,23 @@
+version: '2.1'
+
+services:
+
+  # Build from local "Dockerfile" file
+  local-example:
+    build:
+      context: .
+    image: munkyboy/fakesmtp
+    volumes:
+      - /tmp/fakemail:/var/mail
+    #ports:
+    #  - "2525:25"
+    restart: always
+
+  # Download from Docker Hub
+  remote-example:
+    image: munkyboy/fakesmtp
+    volumes:
+      - /tmp/fakemail:/var/mail
+    #ports:
+    #  - "2525:25"
+    restart: always
